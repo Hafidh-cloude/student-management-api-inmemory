@@ -1,6 +1,6 @@
 # Student Management API
 
-REST API sederhana untuk mengelola data mahasiswa menggunakan FastAPI dan SQLite.
+REST API sederhana untuk mengelola data mahasiswa menggunakan FastAPI dengan in-memory storage.
 
 ## Fitur
 
@@ -9,35 +9,47 @@ REST API sederhana untuk mengelola data mahasiswa menggunakan FastAPI dan SQLite
 - Menampilkan data mahasiswa berdasarkan ID
 - Memperbarui data mahasiswa
 - Menghapus data mahasiswa
-- Validasi input
+- Validasi input menggunakan Pydantic
+- Interactive API documentation menggunakan Swagger UI
 
 ## Teknologi
 
 - Python
 - FastAPI
-- SQLAlchemy
-- SQLite
 - Pydantic
 - Uvicorn
+
+## Storage
+
+Data mahasiswa disimpan menggunakan **in-memory storage (Python list)**.
+
+Data akan kembali kosong ketika aplikasi di-restart atau di-deploy ulang.
 
 ## Struktur Project
 
 ```text
-app/
-├── main.py
-├── database.py
-├── models.py
-├── schemas.py
-└── routers/
-    └── students.py
+student-management-api-inmemory/
+├── app/
+│   ├── __init__.py
+│   ├── main.py
+│   ├── schemas.py
+│   └── routers/
+│       ├── __init__.py
+│       └── students.py
+├── .gitignore
+├── .python-version
+├── README.md
+├── pyproject.toml
+├── requirements.txt
+└── uv.lock
 ```
 
 ## Instalasi
 
 Clone repository:
 ```text
-git clone https://github.com/Hafidh-cloude/student-management-api.git
-cd student-management-api
+git clone https://github.com/Hafidh-cloude/student-management-api-inmemory.git
+cd student-management-api-inmemory
 ```
 
 ## Install dependencies:
@@ -46,7 +58,7 @@ uv sync
 ```
 ## Jalankan aplikasi:
 ```text
-uv run uvicorn app.main:app --reload
+uv run fastapi dev app/main.py
 ```
 ## API akan berjalan di:
 ```text
