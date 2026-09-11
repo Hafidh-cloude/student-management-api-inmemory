@@ -64,10 +64,14 @@ uv run fastapi dev app/main.py
 ```text
 http://127.0.0.1:8000
 ```
-## Interactive API documentation:
-```text
-http://127.0.0.1:8000/docs
-```
+## Deployment
+
+Aplikasi telah di-deploy menggunakan FastAPI Cloud.
+
+**API Documentation:**  
+https://student-management-api-0822cc2d.fastapicloud.dev/docs
+
+Gunakan Swagger UI untuk mencoba seluruh API secara interaktif.
 ## API Endpoints
 Method	Endpoint	Deskripsi:
 ```text
