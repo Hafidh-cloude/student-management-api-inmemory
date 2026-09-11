@@ -21,9 +21,9 @@ REST API sederhana untuk mengelola data mahasiswa menggunakan FastAPI dengan in-
 
 ## Storage
 
-Data mahasiswa disimpan menggunakan **in-memory storage (Python list)**.
+Data mahasiswa disimpan menggunakan **in memory storage (Python list)**.
 
-Data akan kembali kosong ketika aplikasi di-restart atau di-deploy ulang.
+Data akan kembali kosong ketika aplikasi direstart atau dideploy ulang.
 
 ## Struktur Project
 
@@ -66,7 +66,7 @@ http://127.0.0.1:8000
 ```
 ## Deployment
 
-Aplikasi telah di-deploy menggunakan FastAPI Cloud.
+Aplikasi telah di deploy menggunakan FastAPI Cloud.
 
 **API Documentation:**  
 https://student-management-api-0822cc2d.fastapicloud.dev/docs
